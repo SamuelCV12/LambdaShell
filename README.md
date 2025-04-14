@@ -125,11 +125,14 @@ eval Zero n1       -- Returns: false
 
 ---
 
-## 📅 References
+  ## References
 
-- **Lambda Shell repository:** [https://github.com/andrejlamport/lambda-shel](https://github.com/andrejlamport/lambda-shel)
-- **Lambda Calculus Concepts:** Barendregt, H. P. (1984). *The Lambda Calculus: Its Syntax and Semantics*.
-- **AI Tools used:** ChatGPT, GPTonline - [https://gptonline.ai/es/](https://gptonline.ai/es/)
+1. **videos**
+   -  How to install WSL for windows 11 (https://youtu.be/lt4UtlUzx9w?si=M2_yQ7ypWq0F5V4c)
+2. **PDF**
+   - Guidelines for Lambda Shell  (https://asr.github.io/courses/programs-installations-tips-and-tricks.pdf.)
+3. **AI Tools:**
+   - ChatGPT and DeepSeek for code organization, explanation of lambdaShell and documentation guidance.
 
 
 
