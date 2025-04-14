@@ -1,43 +1,42 @@
 # Barendregt Numerals in Lambda Shell
 
-## Nombre del estudiante
-- Samuel Correa Velasquez
+## Samuel Correa Velasquez
 
 
 ---
 
 ## Combinators Specification
 
-### 1. `S+` (Successor)
+### 1. S+ (Successor)
 - **Description:** Constructs the successor of a Barendregt numeral.
-- **Definition:** `S+ = λx. [false, x]`
-- **Input:** A numeral `n`.
-- **Output:** A new numeral representing `n + 1`.
+- **Definition:** S+ = λx. [false, x]
+- **Input:** A numeral n.
+- **Output:** A new numeral representing n + 1.
 - **Examples:**
-  - `S+ n0` = `n1`
-  - `S+ n1` = `n2`
+  - S+ n0 = n1
+  - S+ n1 = n2
 
 ---
 
-### 2. `P−` (Predecessor)
+### 2. P− (Predecessor)
 - **Description:** Retrieves the predecessor of a Barendregt numeral.
-- **Definition:** `P− = λx. x false`
-- **Input:** A numeral `n`.
-- **Output:** A numeral representing `n - 1`. If `n = 0`, returns `false`.
+- **Definition:** P− = λx. x false
+- **Input:** A numeral n.
+- **Output:** A numeral representing n - 1. If n = 0, returns false.
 - **Examples:**
-  - `P- n0` = `false`
-  - `P- n1` = `n0`
+  - P- n0 = false
+  - P- n1 = n0
 
 ---
 
-### 3. `Zero` (Zero Test)
+### 3. zero (Zero Test)
 - **Description:** Checks whether a numeral is zero.
-- **Definition:** `Zero = λx. x true`
-- **Input:** A numeral `n`.
-- **Output:** Returns `true` if `n = 0`, otherwise returns `false`.
+- **Definition:** Zero = λx. x true
+- **Input:** A numeral n.
+- **Output:** Returns true if n = 0, otherwise returns false.
 - **Examples:**
-  - `Zero n0` = `true`
-  - `Zero n1` = `false`
+  - Zero n0 = true
+  - Zero n1 = false
 
 ---
 
