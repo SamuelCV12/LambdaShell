@@ -15,8 +15,9 @@
 ## Combinators Specification
 
 ### 1. S+ (Successor)
+
 - **Description:** Constructs the successor of a Barendregt numeral.
-- **Definition:** S+ = λx. [false, x]
+- **Definition:** S+ = \x. [false, x]
 - **Input:** A numeral n.
 - **Output:** A new numeral representing n + 1.
 - **Examples:**
@@ -26,8 +27,9 @@
 ---
 
 ### 2. P− (Predecessor)
+
 - **Description:** Retrieves the predecessor of a Barendregt numeral.
-- **Definition:** P− = λx. x false
+- **Definition:** P− = \x. x false
 - **Input:** A numeral n.
 - **Output:** A numeral representing n - 1. If n = 0, returns false.
 - **Examples:**
@@ -37,8 +39,9 @@
 ---
 
 ### 3. zero (Zero Test)
+
 - **Description:** Checks whether a numeral is zero.
-- **Definition:** Zero = λx. x true
+- **Definition:** Zero = \x. x true
 - **Input:** A numeral n.
 - **Output:** Returns true if n = 0, otherwise returns false.
 - **Examples:**
@@ -70,3 +73,64 @@ let n3 = pair false n2
 let S+   = \x. pair false x
 let P-   = \x. x false
 let Zero = \x. x true
+```
+
+---
+
+## How to Run the Code in Lambda Shell (Detailed Instructions)
+
+---
+### **1. Open the Terminal**
+
+Depending on your system:
+
+- **If you're on Debian or another Linux distro:** Press Ctrl + Alt + T to open the terminal.
+- **If you're using Windows with WSL (Windows Subsystem for Linux):**
+  - Open the **Start Menu**.
+  - Search for **"WSL"** or the name of your installed Linux distro (e.g., *Ubuntu*).
+  - Click to open it.
+---
+
+### **2. Navigate to the Project Folder**
+
+This is the folder where your code file CodigoLambdaShell.txt is saved.
+
+Use the cd (change directory) command to move into that folder.
+
+### **3. Launch Lambda Shell**
+
+Once inside the folder, start the **Lambda Shell** interpreter.
+
+### **4. Load Your File**
+
+Now, load your file with this command:
+
+:l CodigoLambdaShell.txt
+
+---
+
+### **5. Test the Functions**
+
+You can now test the combinators you've defined.
+
+Example tests:
+
+bash
+eval S+ n0         -- Returns: n1
+eval S+ (S+ n0)    -- Returns: n2
+eval P- n1         -- Returns: n0
+eval P- n0         -- Returns: false
+eval Zero n0       -- Returns: true
+eval Zero n1       -- Returns: false
+
+---
+
+## 📅 References
+
+- **Lambda Shell repository:** [https://github.com/andrejlamport/lambda-shel](https://github.com/andrejlamport/lambda-shel)
+- **Lambda Calculus Concepts:** Barendregt, H. P. (1984). *The Lambda Calculus: Its Syntax and Semantics*.
+- **AI Tools used:** ChatGPT, GPTonline - [https://gptonline.ai/es/](https://gptonline.ai/es/)
+
+
+
+
