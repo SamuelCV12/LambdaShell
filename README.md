@@ -8,7 +8,7 @@
 
 - **Operating System:** Debian 12.10 (via WSL on Windows 11)
 - **Interpreter:** Lambda Shell
-- **Haskell Compiler:** GHC 9.6.7
+- **Haskell Compiler:** GHC  version 9.6.7
 
 ---
 
