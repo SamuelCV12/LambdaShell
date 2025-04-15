@@ -22,9 +22,9 @@ To execute the Barendregt numeral operations in the Lambda Shell, follow these s
    - Start the Lambda Shell interpreter by typing "lambda-shell".
 
 2. **Write the Code File:**
-   - Once the Lambda Shell is running, write the definitions found in the document CodigoLambdaShell.txt
-     
-   - The Lambda Shell will process the definitions
+   - Once the Lambda Shell is running, load your code definitions using the ":l" command followed by the filename: 
+     :l CodigoLambdaShell.lam
+   - The Lambda Shell will process the file, and the defined combinators 
      (like true, false, pair, fst, snd, S+, P-, Zero, and the numeral definitions n0, n1, etc.)
       will be available in the environment.
 3. **Execute Test Commands:**
