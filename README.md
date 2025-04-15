@@ -35,21 +35,21 @@ To execute the Barendregt numeral operations in the Lambda Shell, follow these s
 
      - **Successor (S+) Examples:**
        
-       eval S+ n0
+       eval S+ n0 <br>
        eval S+ (S+ n0)
        
        *(Expected output: n1, n2 respectively)*
 
      - **Predecessor (P-) Examples:**
        
-       eval P- n1
+       eval P- n1 <br>
        eval P- n0
        
        *(Expected output: n0, false respectively)*
 
      - **Zero Test (Zero) Examples:**
        
-       eval Zero n0
+       eval Zero n0 <br>
        eval Zero n1
        
        *(Expected output: true, false respectively)*
