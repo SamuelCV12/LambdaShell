@@ -11,6 +11,7 @@
 - **Haskell Compiler:** GHC 9.4.8
 
 ---
+
 ## Detailed instructions for running the code
 
 To execute the Barendregt numeral operations in the Lambda Shell, follow these steps:
@@ -54,8 +55,6 @@ To execute the Barendregt numeral operations in the Lambda Shell, follow these s
        *(Expected output: true, false respectively)*
 
    - Observe the output of each command to verify the correct behavior of the Barendregt numeral operations.
-
----
 
 ---
 
