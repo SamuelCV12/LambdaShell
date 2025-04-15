@@ -21,36 +21,34 @@ To execute the Barendregt numeral operations in the Lambda Shell, follow these s
    - Navigate to the directory where your Lambda Shell code file (CodigoLambdaShell.txt) is located using the "cd" command.
    - Start the Lambda Shell interpreter by typing "lambda-shell".
 
-2. **Load the Code File:**
-   - Once the Lambda Shell is running, load your code definitions using the ":l" command followed by the filename:
-   
-     :l CodigoLambdaShell.txt
+2. **Write the Code File:**
+   - Once the Lambda Shell is running, write the definitions found in the document CodigoLambdaShell.txt
      
-   - The Lambda Shell will process the file, and the defined combinators
+   - The Lambda Shell will process the definitions
      (like true, false, pair, fst, snd, S+, P-, Zero, and the numeral definitions n0, n1, etc.)
       will be available in the environment.
 3. **Execute Test Commands:**
-   - Now you can evaluate the behavior of the implemented operations by using the eval command followed by the expression you want to evaluate.
+   - Now you can evaluate the behavior of the implemented operations.
    - Here are some examples:
 
      - **Successor (S+) Examples:**
        
-       eval S+ n0 <br>
-       eval S+ (S+ n0)
+        S zero <br>
+        S (S zero)
        
-       *(Expected output: n1, n2 respectively)*
+       *(Expected output: one, two respectively)*
 
      - **Predecessor (P-) Examples:**
        
-       eval P- n1 <br>
-       eval P- n0
+        P one <br>
+        P zero
        
-       *(Expected output: n0, false respectively)*
+       *(Expected output: zero, false respectively)*
 
      - **Zero Test (Zero) Examples:**
        
-       eval Zero n0 <br>
-       eval Zero n1
+        isZero zero <br>
+        isZero one
        
        *(Expected output: true, false respectively)*
 
