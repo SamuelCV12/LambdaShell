@@ -1,0 +1,36 @@
+# Booleans
+ true = \x.\y.x;
+ false = \x.\y.y;
+ I = \x.x;
+
+# Order pair and projections
+ pair = \m.\n.\z.z m n;
+ fst = \p.p true;
+ snd = \p.p false;
+
+# Numerals
+ zero = I;
+ one = pair false zero;
+ two = pair false one;
+ three = pair false two;
+
+# Succesor, predecesor and test for zero.
+ S = \x. pair false x;   # Successor: S⁺(n) = [false, n]
+ P = \x. x false;        # Predecessor: P⁻(n) = n false
+ iszero = \x. x true;        # Zero test: Zero(n) = n true
+
+
+
+# Examples for S⁺ (Successor)
+#  S zero  -- Expected result: [false, 0] ≡ 1
+#  S one  -- Expected result: [false, [false, 0]] ≡ 2
+
+# Examples for P⁻ (Predecessor)
+#  P zero  -- Expected result: false 
+#  P one  -- Expected result: 0 
+
+# Examples for isZero (Zero test)
+# iszero zero -- Expected result: true 
+# iszero one  -- Expected result: false
+
+

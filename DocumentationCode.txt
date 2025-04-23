@@ -1,0 +1,74 @@
+Explanation of the Code in LambdaShell
+
+This document provides a step-by-step explanation of the definitions and examples used in LambdaShell, implementing Barendregt’s numerals.
+
+1. Booleans
+-----------
+ true = \x. \y. x;
+  - Represents the boolean value true. It takes two arguments "x" and "y" and returns "x".
+ false = \x. \y. y;
+  - Represents false. It takes "x" and "y" and returns "y".
+I = \x. x;
+  - The identity function. It returns its argument "x" unchanged.
+
+These boolean definitions are used to construct pairs and control flow in numeral operations.
+
+2. Pairs and Projections
+------------------------
+ pair = \m. \n. \z. z m n;
+  - Builds an ordered pair [m, n]. Given "m" and "n", it returns a function that, when applied to a selector "z", executes "z m n".
+ fst = \p. p true;
+  - The first projection. Applying "fst" to a pair returns its first component.
+ snd = \p. p false;
+  - The second projection. Applying "snd" to a pair returns its second component.
+
+3. Barendregt’s Numerals
+------------------------
+ zero = I;
+  - The numeral 0 is represented by the identity function. This distinguishes zero from successors.
+ one = pair false zero;
+  - The numeral 1 is encoded as [false, zero].
+ two = pair false one;
+  - The numeral 2 is [false, one].
+ three = pair false two;
+  - The numeral 3 is [false, two].
+
+Each numeral "n+1" is constructed as a pair where the boolean "false" indicates a non-zero value, and the second component holds the previous numeral "n".
+
+4. Combinators
+-------------------
+ S = \x. pair false x;
+  - Successor: Given a numeral "n", "S n" produces the numeral "n+1" ([false, n]).
+ P = \x. x false;
+  - Predecessor: Applies the numeral "x" to "false". If "x" is "zero" (identity), it returns "false"; if "x" is a successor [false, n], it returns `n`.
+ iszero = \x. x true;
+  - Zero test: Applies "x" to "true". If "x" is "zero", it returns "true"; if "x" is a successor, it returns "false".
+
+5. Examples
+------------------------------------
+
+Successor (S)
+- "S zero"
+  - Evaluates to "pair false zero", representing the numeral 1.
+- "S one"
+  - Evaluates to "pair false (pair false zero)", representing 2.
+- "S (S zero)"
+  - Applies successor twice, yielding "pair false (pair false zero)" (2).
+
+Predecessor (P)
+- "P zero"
+  - "zero false" = "I false" = "false".
+- "P one"
+  - "one false" = "(pair false zero) false" = "zero" (numeral 0).
+
+Zero Test (iszero)
+- "iszero zero"
+  - "zero true" = "I true" = "true".
+- "iszero one"
+  - "one true" = "(pair false zero) true" = "false".
+
+
+
+
+
+
