@@ -57,6 +57,7 @@ To execute the Barendregt numeral operations in the Lambda Shell, follow these s
    - Observe the output of each command to verify the correct behavior of the Barendregt numeral operations.
 
 ---
+3. **Explanatory video: https://youtu.be/VDuRU2eAxi0**
 
 ## References
 
